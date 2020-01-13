@@ -1,2 +1,0 @@
-(this["webpackJsonpfinal-exam"]=this["webpackJsonpfinal-exam"]||[]).push([[0],[,,,function(n,e,t){n.exports=t(10)},,,,,function(n,e,t){},function(n,e,t){},function(n,e,t){"use strict";t.r(e);var a=t(0),r=t.n(a),c=t(2),i=t.n(c);t(8),t(9);var o=function(){return r.a.createElement("div",null)};i.a.render(r.a.createElement(o,null),document.getElementById("root"))}],[[3,1,2]]]);
-//# sourceMappingURL=main.2657f1c9.chunk.js.map
