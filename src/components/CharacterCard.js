@@ -1,21 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-class CharacterCard extends React.Component {
-    render(props) {
-        console.log(this.props.characters.image)
-        return (
-            <tr>
-                <td>
-
+const CharacterCard = (props) => {
+    const { id, image, name, species } = props.characters;
+    const route = `/characters/${id}`;
+    return (
+        <tr>
+            <td>
+                <Link to={route}>
+                    <img src={image} alt='character' />
                     <div>
-                        <img src={this.props.characters.image} alt='character' />
+                        <p>
+                            {name}
+                        </p>
+                        <p>
+                            {species}
+                        </p>
                     </div>
-                    {this.props.characters.name}<br />
-                    {this.props.characters.species}
-                </td>
-            </tr>
-        )
-    }
-}
+                </Link>
+            </td>
+        </tr>
+    )
+};
 
 export default CharacterCard;
