@@ -6,9 +6,14 @@ const CharacterDetail = (props) => {
     return (
         <div>
             <Link to='/'>
-                Volver
+                <button>
+                    <i className="fas fa-chevron-circle-left">
+                    </i>
+                    Volver
+            </button>
+
             </Link>
-            <table className="table">
+            <table className="tableDetail">
                 <tbody>
                     <tr>
                         <td>
@@ -19,7 +24,7 @@ const CharacterDetail = (props) => {
                                 {name}
                             </p>
                             <p>
-                                Status: {status}
+                                Status: {status === 'Dead' ? (<i className="fas fa-skull-crossbones"></i>) : status}
                             </p>
                             <p>
                                 Species: {species}

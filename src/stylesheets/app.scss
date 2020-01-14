@@ -1,5 +1,48 @@
 .header {
   display: flex;
   justify-content: center;
-  align-items: center;
+  @media (min-width: 320px) {
+    margin: 25px;
+    margin-bottom: 50px;
+    &--logo {
+      width: 350px;
+    }
+  }
+}
+.form {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  &--input {
+    color: white;
+    background-color: black;
+    padding-left: 10px;
+    font-size: larger;
+    border-color: #10c7e7;
+    border-radius: 20px;
+    margin: 0 20px;
+    width: 250px;
+  }
+}
+.tableList {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container {
+  border: 10px black solid;
+  position: relative;
+  text-align: center;
+  &__box {
+    width: 250px;
+    &--info {
+      transform: translate(0%, -100%);
+      position: absolute;
+      width: 300px;
+      height: 70px;
+      background-color: #10c7e7;
+    }
+  }
 }

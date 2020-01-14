@@ -3,8 +3,8 @@ import CharacterCard from './CharacterCard';
 
 function CharacterList(props) {
     return (
-        <table className="table">
-            <tbody>
+        <table >
+            <tbody className="tableList">
                 {props.characters.map(characters => {
                     return (
                         <CharacterCard

@@ -7,9 +7,8 @@ const Filters = (props) => {
     };
 
     return (
-        <form>
-            <label htmlFor="inputCharacter"> Introduce al personaje</label>
-            <input id="inputCharacter" type="text" placeholder="Rick" onChange={handleSearch} />
+        <form className='form'>
+            <input className='form--input' id="inputCharacter" type="text" placeholder="Rick" onChange={handleSearch} />
         </form>
     )
 };
