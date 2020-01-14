@@ -3,9 +3,9 @@ import apiCharacters from '../api/characters';
 import CharacterDetail from './CharacterDetail';
 import CharacterList from './CharacterList';
 import Header from './Header';
-import Form from './Form';
 import Filters from './Filters';
 import { Route, Switch } from 'react-router-dom';
+import '../stylesheets/app.scss'
 
 class App extends React.Component {
   constructor() {
@@ -19,15 +19,22 @@ class App extends React.Component {
     this.filterCharacters = this.filterCharacters.bind(this);
   }
 
+  //api
+
   componentDidMount() {
     apiCharacters().then(characters => this.setState({ characters }));
   }
+
+  //search
 
   handleSearch(data) {
     this.setState({
       search: data.value
     })
   }
+
+  //characterCard with Details
+
   renderCharacterDetail(props) {
     const routeId = parseInt(props.match.params.id);
     const characters = this.state.characters.find((item) => {
@@ -40,13 +47,15 @@ class App extends React.Component {
       return < CharacterDetail characters={characters} />
     }
   }
+
+  //filter of characters
+
   filterCharacters() {
     return this.state.characters
       .filter(characters => characters.name === this.state.search.value);
   }
 
   render() {
-    console.log(this.state);
     const filteredCharacter = this.state.characters.filter(characters => {
       return characters.name.toLowerCase().includes(this.state.search.toLowerCase())
     });
@@ -55,7 +64,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/'>
-            <Form handleSearch={this.handleSearch} />
+            <Filters handleSearch={this.handleSearch} />
             <CharacterList characters={filteredCharacter} />
           </Route>
           <Route path='/characters/:id' render={this.renderCharacterDetail} />

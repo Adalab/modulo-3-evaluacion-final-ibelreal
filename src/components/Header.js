@@ -3,7 +3,7 @@ import logo from '../images/logo.png';
 
 function Header() {
     return (
-        <div>
+        <div className='header'>
             <img src={logo} alt='Logo rick and morty' />
         </div>
     )
