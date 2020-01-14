@@ -1,7 +1,7 @@
 import React from 'react';
 import apiCharacters from '../api/characters';
-import CharacterDetail from './CharacterDetail';
 import CharacterList from './CharacterList';
+import CharacterDetail from './CharacterDetail';
 import Header from './Header';
 import Filters from './Filters';
 import { Route, Switch } from 'react-router-dom';
