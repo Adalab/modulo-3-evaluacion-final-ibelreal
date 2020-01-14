@@ -1,12 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const CharacterDetail = (props) => {
-    console.log(props.characters)
     const { image, name, status, origin, episode, species } = props.characters;
     return (
         <div>
-            <h3>Volver</h3>
+            <Link to='/'>
+                Volver
+            </Link>
             <table className="table">
                 <tbody>
                     <tr>

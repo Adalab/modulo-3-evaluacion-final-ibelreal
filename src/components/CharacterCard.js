@@ -9,15 +9,15 @@ const CharacterCard = (props) => {
             <td>
                 <Link to={route}>
                     <img src={image} alt='character' />
-                    <div>
-                        <p>
-                            {name}
-                        </p>
-                        <p>
-                            {species}
-                        </p>
-                    </div>
                 </Link>
+                <div>
+                    <p>
+                        {name}
+                    </p>
+                    <p>
+                        {species}
+                    </p>
+                </div>
             </td>
         </tr>
     )
